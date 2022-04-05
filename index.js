@@ -4,6 +4,7 @@ const config = require("./utils/config");
 
 const merchant_model = require("./models/merchant");
 
+app.use(express.static('build'))
 app.use(express.json());
 app.use(function (req, res, next) {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
